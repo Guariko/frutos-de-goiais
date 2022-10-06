@@ -268,6 +268,10 @@ p {
     top: -.7rem;
 }
 
+.video__content .regular__p {
+    margin-top: -4rem;
+}
+
 /* FIXME: Hero section ends */
 
 /* TODO: Natural section starts */
@@ -597,11 +601,24 @@ p {
     .garantee-container {
         display: grid;
         justify-content: center;
-        grid-template: repeat(5, 27rem) / repeat(2, 43rem);
+        grid-template: repeat(18, 9rem) / repeat(2, 43rem);
         grid-template-areas: "garanteecontent garanteecontent"
+                             "garanteecontent garanteecontent"
+                             "garanteecontent garanteecontent"
+                             "garanteecontent garanteecontent"
+                             "first           first"
+                             "first           first"
+                             "first           first"
                              "first           first"
                              "second          third"
                              "second          third"
+                             "second          third"
+                             "second          third"
+                             "second          third"
+                             "second          third"
+                             "fourth          fourth"
+                             "fourth          fourth"
+                             "fourth          fourth"
                              "fourth          fourth";
     }
 
@@ -666,8 +683,11 @@ p {
         display: grid;
         justify-content: center;
         gap: 2rem;
-        grid-template: repeat(12, 6rem) / repeat(8, 13rem);
+        grid-template: repeat(16, 5.5rem) / repeat(8, 13rem);
         grid-template-areas: "contentgarantee  contentgarantee contentgarantee first  first  image1 image1 image1"
+                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
+                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
+                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
                               "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
                               "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
                               "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
