@@ -388,6 +388,98 @@ p {
 
 /* FIXME: Garantee section ends */
 
+/* TODO: Video section starts */
+
+.video__content {
+    gap: 3rem;
+}
+
+.video-section-container {
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.video__capa,
+.video__container {
+    border-radius: 2rem;
+}
+
+.video__container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video__container::before {
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,.4);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    border-radius: 2rem;
+}
+
+.video__play {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    font-size: 5rem;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    color: var(--dark-yellow);
+    transition: all .2s linear;
+}
+
+.video__container:hover .video__play {
+    color: var(--green);
+}
+
+.video__content .regular__h {
+    max-width: 20ch;
+}
+
+.video__container__itself {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 20;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    cursor: initial;
+}
+
+.video__container__itself.active {
+    display: flex;
+}
+
+.close__video {
+    color: var(--white);
+    top: 5rem;
+    right: 2rem;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.video {
+    width: 100%;
+    max-width: 50rem;
+    border-radius: 1rem;
+}
+
+/* FIXME: Video sectin ends */
+
 /* TODO: Media queries start */
 
 @media screen and (min-width: 700px) {
@@ -424,6 +516,21 @@ p {
     }
 
     /* FIXME: Hero section adjustments end */
+
+    /* TODO: Video section adjustments */
+
+    .video-section-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 6rem;
+    }
+
+    .video__capa {
+        min-height: 42rem;
+    }
+
+    /* FIXME: Video section adjustments end */
 
 }
 
@@ -524,6 +631,22 @@ p {
     }
 
     /* FIXME: Garantee adjustments end */
+
+    /* TODO: Video section adjustments */
+
+    .video-section-container {
+        gap: 8rem;
+    }
+
+    .video {
+        max-width: 60rem;
+    }
+
+    .close__video {
+        right: 4rem;
+    }
+
+    /* FIXME: Video section adjustments end */
     
 }
 
@@ -543,7 +666,7 @@ p {
         display: grid;
         justify-content: center;
         gap: 2rem;
-        grid-template: repeat(16, 6rem) / repeat(8, 13rem);
+        grid-template: repeat(12, 6rem) / repeat(8, 13rem);
         grid-template-areas: "contentgarantee  contentgarantee contentgarantee first  first  image1 image1 image1"
                               "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
                               "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
@@ -580,6 +703,12 @@ p {
     }
  
     /* FIXME: Garantee adjustments end */
+
+    .close__video {
+        right: 8rem;
+    }
+
+    /* FIXME: Video section adjustments end */
     
 }
 

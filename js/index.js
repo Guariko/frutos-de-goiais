@@ -58,6 +58,22 @@ window.addEventListener("resize", (e) => {
 
 /* FIXME: Garantee ends */
 
+/* TODO: Video section starts */
+
+const videoCapaContainer = document.querySelector(".video__container");
+const videoContainer = document.querySelector(".video__container__itself");
+const closeVideoContainer = document.querySelector(".close__video");
+
+videoCapaContainer.addEventListener("click", (e) => {
+  addClass(videoContainer, classToDisplayElement);
+});
+
+closeVideoContainer.addEventListener("click", (e) => {
+  removeClass(videoContainer, classToDisplayElement);
+});
+
+/* FIXME: Video section ends */
+
 /* TODO: Functions start */
 
 function addClass(elementToUse, classToAdd) {
