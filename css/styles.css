@@ -484,6 +484,95 @@ p {
 
 /* FIXME: Video sectin ends */
 
+/* TODO: Products start */
+
+.product__section__intro__container {
+    gap: 2rem;
+    align-items: center;
+}
+
+.products__intro__container {
+    margin-top: 4rem;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.products__intro__img {
+    border-radius: 1.5rem;
+}
+
+.product__section__intro__container .regular__h,
+.product__section__intro__container .regular__p {
+    text-align: center;
+}
+
+.menu {
+    margin-top: 12rem;
+    align-items: center;
+    gap: 7rem;
+}
+
+.menu__content {
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 90rem;
+}
+
+.menu__product__container {
+    padding: 0;
+    padding-bottom: 1rem;
+    border: 1px solid var(--transparent);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 1px 2px 8px 1px rgba(0,0,0,0.1);
+    flex: 1 1 26rem;
+}
+
+.product__info {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 .8rem;
+}
+
+.menu__product__container h3 {
+    font-size: 2rem;
+    color: #222;
+    text-transform: capitalize;
+}
+
+.menu__product__container mark {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #222;
+}
+
+.menu__product__container mark strong {
+    color: var(--green);
+}
+
+.menu__product__container img {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.menu__product__container .button {
+    white-space: unset;
+    border-radius: 1.5rem;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.product__buttons__container {
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 2rem;
+}
+
+/* FIXME: Products end*/
+
 /* TODO: Media queries start */
 
 @media screen and (min-width: 700px) {
@@ -535,6 +624,28 @@ p {
     }
 
     /* FIXME: Video section adjustments end */
+
+    /* TODO: Products adjustments */
+
+    .products__intro__container {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .products__intro__img {
+        height: 100%;
+    }
+
+    .product__intro__img__container {
+        flex: .33 .33;
+        max-width: 35rem;
+    }
+
+    .product__info {
+        padding: 0 1rem;
+    }
+    
+    /* FIXME: Products adjustments end */
 
 }
 
@@ -683,7 +794,7 @@ p {
         display: grid;
         justify-content: center;
         gap: 2rem;
-        grid-template: repeat(16, 5.5rem) / repeat(8, 13rem);
+        grid-template: repeat(15, 5.5rem) / repeat(8, 13rem);
         grid-template-areas: "contentgarantee  contentgarantee contentgarantee first  first  image1 image1 image1"
                               "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
                               "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
@@ -698,8 +809,7 @@ p {
                               "image2          image2          image2          image3 image3 image3 image3 image3"
                               "image2          image2          image2          image3 image3 image3 image3 image3"
                               "image2          image2          image2          image3 image3 image3 image3 image3"
-                              "image2          image2          image2          image3 image3 image3 image3 image3";
-                              
+                              "image2          image2          image2          image3 image3 image3 image3 image3";                          
     }
 
     .garantee__content {
