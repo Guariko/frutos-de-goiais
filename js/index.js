@@ -63,13 +63,16 @@ window.addEventListener("resize", (e) => {
 const videoCapaContainer = document.querySelector(".video__container");
 const videoContainer = document.querySelector(".video__container__itself");
 const closeVideoContainer = document.querySelector(".close__video");
+const video = document.querySelector(".video");
 
 videoCapaContainer.addEventListener("click", (e) => {
   addClass(videoContainer, classToDisplayElement);
+  video.play();
 });
 
 closeVideoContainer.addEventListener("click", (e) => {
   removeClass(videoContainer, classToDisplayElement);
+  video.pause();
 });
 
 /* FIXME: Video section ends */
