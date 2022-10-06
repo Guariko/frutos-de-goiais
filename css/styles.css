@@ -150,6 +150,10 @@ p {
     display: none;
 }
 
+.small__gap {
+    gap: .5rem;
+}
+
 /* FIXME: Global classes end */
 
 /* TODO: Header starts */
@@ -569,6 +573,11 @@ p {
     flex-direction: column;
     gap: .5rem;
     margin-top: 2rem;
+}
+
+.product__info .fa-star {
+    font-size: 1.7rem;
+    color: var(--yellow);
 }
 
 /* FIXME: Products end*/
