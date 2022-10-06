@@ -56,7 +56,7 @@ p {
     --global-horizontal-padding: 1.6rem;
     --header-height: 10rem;
     --transparent: rgba(0,0,0,0.1);
-    --regular-font-size: 1.6rem;
+    --regular-font-size: 1.7rem;
 }
 
 /* FIXME: Variables end */
@@ -89,6 +89,10 @@ p {
 
 .items__center {
     align-items: center;
+}
+
+.content__center {
+    justify-content: center;
 }
 
 .pointer {
@@ -132,6 +136,14 @@ p {
 
 .button:hover {
     background: var(--dark-yellow);
+}
+
+.section {
+    padding-bottom: 15rem;
+}
+
+.regular__image {
+    width: 100%;
 }
 
 /* FIXME: Global classes end */
@@ -254,6 +266,45 @@ p {
 
 /* FIXME: Hero section ends */
 
+/* TODO: Natural section starts */
+
+.natural-container {
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.natural__image {
+    border-radius: 1.5rem;
+    max-height: 40rem;
+    object-fit: cover;
+}
+
+.natural__content {
+    gap: 2.5rem;
+}
+
+.natural__list {
+    gap: 1rem;
+}
+
+.natural__list__item {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.natural__list__item i {
+    color: var(--dark-yellow);
+}
+
+.natural__list__item mark {
+    font-weight: 500;
+    color: #444;
+}
+
+/* FIXME: Natural section ends */
+
 /* TODO: Media queries start */
 
 @media screen and (min-width: 700px) {
@@ -330,6 +381,38 @@ p {
     }
 
     /* FIXME: Header adjustments end */
+
+    /* TODO: Natural section adjustments */
+
+    .natural__image {
+        max-height: initial;
+        height: 48rem;
+    }
+
+    .natural-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .natural-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* FIXME: Natural section adjustments end */
+    
+}
+
+@media screen and (min-width: 1280px) {
+
+    /* TODO: Natural section adjustments */
+
+    .natural-container {
+        gap: 8rem;
+    }
+
+    /* FIXME: Natural section adjustments end */
     
 }
 
