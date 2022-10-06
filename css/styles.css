@@ -146,6 +146,10 @@ p {
     width: 100%;
 }
 
+.none {
+    display: none;
+}
+
 /* FIXME: Global classes end */
 
 /* TODO: Header starts */
@@ -305,6 +309,85 @@ p {
 
 /* FIXME: Natural section ends */
 
+/* TODO: Garantee section starts */
+
+.garantee-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.garantee__content {
+    gap: 1.5rem;
+    border: 2px solid #fcfcec;
+    padding: 2rem 1.5rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    background: #fcfcec;
+}
+
+.garantee__content h2 {
+    font-size: 3rem;
+}
+
+.garantee__content p {
+    color: #111;
+}
+
+.garantee__image {
+    border-radius: 1rem;
+    min-height: 15rem;
+    object-fit: cover;
+}
+
+.garantee__img__container {
+    overflow: hidden;
+    cursor: grabbing;
+    border-radius: 1rem;
+}
+
+.garantee__img__content {
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.6);
+    bottom: -110%;
+    z-index: 2;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    transition: all .4s ease-out;
+}
+
+.garantee__img__container:hover .garantee__img__content {
+    bottom: 0;
+}
+
+.garantee__img__content h3,
+.garantee__img__content p {
+    color: var(--white);
+    text-align: center;
+}
+
+.garantee__img__content h3 {
+    font-size: 2rem;
+}
+
+.garantee__img__content p {
+    font-size: 1.5rem;
+}
+
+.large {
+    max-height: 140rem;
+    object-fit: cover;
+}
+
+/* FIXME: Garantee section ends */
+
 /* TODO: Media queries start */
 
 @media screen and (min-width: 700px) {
@@ -401,6 +484,46 @@ p {
     }
 
     /* FIXME: Natural section adjustments end */
+
+    /* TODO: Garantee adjustments */
+
+    .garantee-container {
+        display: grid;
+        justify-content: center;
+        grid-template: repeat(5, 27rem) / repeat(2, 43rem);
+        grid-template-areas: "garanteecontent garanteecontent"
+                             "first           first"
+                             "second          third"
+                             "second          third"
+                             "fourth          fourth";
+    }
+
+    .garantee__content {
+        grid-area: garanteecontent;
+    }
+
+    .garantee__img__first {
+        grid-area: first;
+    }
+
+    .garantee__img__second {
+        grid-area: second;
+    }
+
+    .garantee__img__third {
+        grid-area: fourth;
+    }
+
+    .garantee__img__fourth {
+        grid-area: third;
+    }
+
+    .garantee__image {
+        height: 100%;
+        object-fit: initial;
+    }
+
+    /* FIXME: Garantee adjustments end */
     
 }
 
@@ -413,6 +536,50 @@ p {
     }
 
     /* FIXME: Natural section adjustments end */
+
+    /* TODO: Garantee adjustments */
+
+    .garantee-container {
+        display: grid;
+        justify-content: center;
+        gap: 2rem;
+        grid-template: repeat(16, 6rem) / repeat(8, 13rem);
+        grid-template-areas: "contentgarantee  contentgarantee contentgarantee first  first  image1 image1 image1"
+                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
+                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
+                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
+                              "image2          image2          image2          first  first  image1 image1 image1"
+                              "image2          image2          image2          image3 image3 image3 image3 image3"
+                              "image2          image2          image2          image3 image3 image3 image3 image3"
+                              "image2          image2          image2          image3 image3 image3 image3 image3"
+                              "image2          image2          image2          image3 image3 image3 image3 image3"
+                              "image2          image2          image2          image3 image3 image3 image3 image3"
+                              "image2          image2          image2          image3 image3 image3 image3 image3"
+                              "image2          image2          image2          image3 image3 image3 image3 image3";
+                              
+    }
+
+    .garantee__content {
+        grid-area: contentgarantee;
+    }
+
+    .garantee__img__first {
+        grid-area: image1;
+    }
+
+    .garantee__img__second {
+        grid-area: first;
+    }
+
+    .garantee__img__third {
+        grid-area: image3;
+    }
+
+    .garantee__img__fourth {
+        grid-area: image2;
+    }
+ 
+    /* FIXME: Garantee adjustments end */
     
 }
 

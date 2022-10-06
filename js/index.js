@@ -28,6 +28,36 @@ headerNavItems.forEach((headerItem) => {
 
 /* FIXME: Header ends */
 
+/* TODO: Garantee starts */
+
+const miniDesktop = 912;
+let miniDesktopConfirm = false;
+
+const imageToReplace = document.querySelector(
+  ".garantee__img__second .garantee__image"
+);
+
+if (window.innerWidth >= 912) {
+  imageToReplace.setAttribute("src", "assets/amount.webp");
+  miniDesktopConfirm = true;
+}
+
+window.addEventListener("resize", (e) => {
+  if (window.innerWidth >= 912) {
+    if (!miniDesktopConfirm) {
+      imageToReplace.setAttribute("src", "assets/amount.webp");
+      miniDesktopConfirm = true;
+    }
+  } else {
+    if (miniDesktopConfirm) {
+      imageToReplace.setAttribute("src", "assets/loja2.webp");
+      miniDesktopConfirm = false;
+    }
+  }
+});
+
+/* FIXME: Garantee ends */
+
 /* TODO: Functions start */
 
 function addClass(elementToUse, classToAdd) {
