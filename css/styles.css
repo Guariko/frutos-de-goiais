@@ -100,8 +100,6 @@ p {
 }
 
 .main {
-    padding: 2rem var(--global-horizontal-padding);
-    padding-top: 5rem;
     margin-top: var(--header-height);
 }
 
@@ -139,7 +137,7 @@ p {
 }
 
 .section {
-    padding-bottom: 15rem;
+    padding: 10rem var(--global-horizontal-padding);
 }
 
 .regular__image {
@@ -152,6 +150,22 @@ p {
 
 .small__gap {
     gap: .5rem;
+}
+
+.two__gap {
+    gap: 2rem;
+}
+
+.text__center {
+    text-align: center;
+}
+
+.white {
+    color: var(--white);
+}
+
+.margin__top__three {
+    margin-top: 3rem;
 }
 
 /* FIXME: Global classes end */
@@ -276,6 +290,37 @@ p {
     margin-top: -4rem;
 }
 
+.hero-section:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../assets/heroBackground.webp");
+    z-index: -2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(1);
+}
+
+.hero-section::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(85, 14, 85, 0.3);
+    z-index: -1;
+}
+
+.hero-section .regular__p {
+    color: var(--white);
+}
+
 /* FIXME: Hero section ends */
 
 /* TODO: Natural section starts */
@@ -319,79 +364,24 @@ p {
 
 /* TODO: Garantee section starts */
 
-.garantee-container {
-    display: flex;
+.garantee-section {
+    background: #68045c;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.garantee-container article {
+    padding: 0 var(--global-horizontal-padding);
+}
+
+.garantee__images__container {
     flex-direction: column;
-    gap: 2rem;
+    margin-top: 8rem;
 }
 
-.garantee__content {
-    gap: 1.5rem;
-    border: 2px solid #fcfcec;
-    padding: 2rem 1.5rem;
-    border-radius: 2rem;
-    overflow: hidden;
-    background: #fcfcec;
-}
-
-.garantee__content h2 {
-    font-size: 3rem;
-}
-
-.garantee__content p {
-    color: #111;
-}
-
-.garantee__image {
-    border-radius: 1rem;
-    min-height: 15rem;
-    object-fit: cover;
-}
-
-.garantee__img__container {
-    overflow: hidden;
-    cursor: grabbing;
-    border-radius: 1rem;
-}
-
-.garantee__img__content {
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,.6);
-    bottom: -110%;
-    z-index: 2;
-    height: 100%;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 2rem;
-    padding: 2rem 1rem;
-    transition: all .4s ease-out;
-}
-
-.garantee__img__container:hover .garantee__img__content {
-    bottom: 0;
-}
-
-.garantee__img__content h3,
-.garantee__img__content p {
-    color: var(--white);
-    text-align: center;
-}
-
-.garantee__img__content h3 {
-    font-size: 2rem;
-}
-
-.garantee__img__content p {
-    font-size: 1.5rem;
-}
-
-.large {
-    max-height: 140rem;
-    object-fit: cover;
+.garantee__images__container img {
+    width: 100%;
 }
 
 /* FIXME: Garantee section ends */
@@ -625,11 +615,13 @@ p {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 6rem;
+        gap: 5rem;
     }
 
     .video__capa {
-        min-height: 42rem;
+        width: 40rem;
+        aspect-ratio: 2/1;
+        object-fit: cover;
     }
 
     /* FIXME: Video section adjustments end */
@@ -716,59 +708,6 @@ p {
 
     /* FIXME: Natural section adjustments end */
 
-    /* TODO: Garantee adjustments */
-
-    .garantee-container {
-        display: grid;
-        justify-content: center;
-        grid-template: repeat(18, 9rem) / repeat(2, 43rem);
-        grid-template-areas: "garanteecontent garanteecontent"
-                             "garanteecontent garanteecontent"
-                             "garanteecontent garanteecontent"
-                             "garanteecontent garanteecontent"
-                             "first           first"
-                             "first           first"
-                             "first           first"
-                             "first           first"
-                             "second          third"
-                             "second          third"
-                             "second          third"
-                             "second          third"
-                             "second          third"
-                             "second          third"
-                             "fourth          fourth"
-                             "fourth          fourth"
-                             "fourth          fourth"
-                             "fourth          fourth";
-    }
-
-    .garantee__content {
-        grid-area: garanteecontent;
-    }
-
-    .garantee__img__first {
-        grid-area: first;
-    }
-
-    .garantee__img__second {
-        grid-area: second;
-    }
-
-    .garantee__img__third {
-        grid-area: fourth;
-    }
-
-    .garantee__img__fourth {
-        grid-area: third;
-    }
-
-    .garantee__image {
-        height: 100%;
-        object-fit: initial;
-    }
-
-    /* FIXME: Garantee adjustments end */
-
     /* TODO: Video section adjustments */
 
     .video-section-container {
@@ -776,7 +715,11 @@ p {
     }
 
     .video {
-        max-width: 60rem;
+        max-width: 80rem;
+    }
+
+    .video__capa {
+        width: 50rem;
     }
 
     .close__video {
@@ -784,6 +727,38 @@ p {
     }
 
     /* FIXME: Video section adjustments end */
+
+    /* TODO: Garantee adjustments */
+
+    .garantee__images__container {
+        display: grid;
+        grid-template: repeat(2, auto) / 22fr 35fr 43fr;
+        grid-template-areas: "kids loja1 loja2"
+                             "kids loja3 loja2";
+    }
+
+    .kids {
+        grid-area: kids;
+    }
+
+    .loja2 {
+        grid-area: loja2;
+    }
+
+    .loja1 {
+        grid-area: loja1;
+    }
+
+    .loja3 {
+        grid-area: loja3;
+    }
+
+    .garantee__images__container img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* FIXME: Garantee adjustments end */
     
 }
 
@@ -796,55 +771,15 @@ p {
     }
 
     /* FIXME: Natural section adjustments end */
-
-    /* TODO: Garantee adjustments */
-
-    .garantee-container {
-        display: grid;
-        justify-content: center;
-        gap: 2rem;
-        grid-template: repeat(15, 5.5rem) / repeat(8, 13rem);
-        grid-template-areas: "contentgarantee  contentgarantee contentgarantee first  first  image1 image1 image1"
-                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
-                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
-                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
-                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
-                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
-                              "contentgarantee contentgarantee contentgarantee first  first  image1 image1 image1"
-                              "image2          image2          image2          first  first  image1 image1 image1"
-                              "image2          image2          image2          image3 image3 image3 image3 image3"
-                              "image2          image2          image2          image3 image3 image3 image3 image3"
-                              "image2          image2          image2          image3 image3 image3 image3 image3"
-                              "image2          image2          image2          image3 image3 image3 image3 image3"
-                              "image2          image2          image2          image3 image3 image3 image3 image3"
-                              "image2          image2          image2          image3 image3 image3 image3 image3"
-                              "image2          image2          image2          image3 image3 image3 image3 image3";                          
-    }
-
-    .garantee__content {
-        grid-area: contentgarantee;
-    }
-
-    .garantee__img__first {
-        grid-area: image1;
-    }
-
-    .garantee__img__second {
-        grid-area: first;
-    }
-
-    .garantee__img__third {
-        grid-area: image3;
-    }
-
-    .garantee__img__fourth {
-        grid-area: image2;
-    }
- 
-    /* FIXME: Garantee adjustments end */
+    
+    /* TODO: Video section adjustments */
 
     .close__video {
         right: 8rem;
+    }
+
+    .video__capa {
+        width: 55rem;
     }
 
     /* FIXME: Video section adjustments end */
