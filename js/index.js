@@ -28,24 +28,24 @@ headerNavItems.forEach((headerItem) => {
 
 /* FIXME: Header ends */
 
-/* TODO: Video section starts */
+/* TODO: Hero starts */
 
-const videoCapaContainer = document.querySelector(".video__container");
-const videoContainer = document.querySelector(".video__container__itself");
-const closeVideoContainer = document.querySelector(".close__video");
+const videoThumb = document.querySelector(".video__thumb__container");
+const closeVideo = document.querySelector(".close__video");
+const videoContainer = document.querySelector(".video__container");
 const video = document.querySelector(".video");
 
-videoCapaContainer.addEventListener("click", (e) => {
+videoThumb.addEventListener("click", (e) => {
   addClass(videoContainer, classToDisplayElement);
   video.play();
 });
 
-closeVideoContainer.addEventListener("click", (e) => {
+closeVideo.addEventListener("click", (e) => {
   removeClass(videoContainer, classToDisplayElement);
   video.pause();
 });
 
-/* FIXME: Video section ends */
+/* FIXME: Hero ends */
 
 /* TODO: Functions start */
 
