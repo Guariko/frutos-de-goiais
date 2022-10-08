@@ -385,6 +385,11 @@ p {
     font-size: 1.6rem;
 }
 
+.green__container .regular__p strong {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
 .car__image {
     width: 100%;
     max-width: 58rem;
@@ -512,6 +517,10 @@ p {
 
     .car__content__container {
         min-width: 45rem;
+    }
+
+    .green__container {
+        padding-left: 5rem;
     }
 
     /* FIXME: About adjustments end */
