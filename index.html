@@ -26,9 +26,11 @@
         <i class="fas fa-times header__nav__close absolute mobile confirm"></i>
         <nav>
           <ul class="flex header__nav">
-            <li><a href="#" class="header__nav__item active">início</a></li>
+            <li>
+              <a href="#inicio" class="header__nav__item active">início</a>
+            </li>
 
-            <li><a href="#" class="header__nav__item">sobre</a></li>
+            <li><a href="#sobre" class="header__nav__item">sobre</a></li>
 
             <li class="desktop">
               <picture
@@ -46,7 +48,7 @@
 
     <main class="main">
       <!-- TODO: Hero section starts -->
-      <section class="section hero-section relative">
+      <section id="inicio" class="section hero-section relative">
         <div class="flex column five__gap items__center">
           <div class="relative pointer video__thumb__container">
             <picture>
@@ -74,6 +76,103 @@
         </div>
       </section>
       <!-- FIXME: Hero section ends -->
+
+      <!-- TODO: About starts -->
+
+      <section
+        id="sobre"
+        class="section global__padding about-section relative"
+      >
+        <div class="about__container">
+          <div class="flex column ten__gap about__content">
+            <article class="flex column three__gap">
+              <article class="flex column three__gap">
+                <h2 class="regular__h">Por que existimos?</h2>
+                <p class="regular__p green">
+                  Nossa essência é inspirada na Cidade de Goiás, terra de Cora
+                  Coralina, famosa por seus doces e por seus grandes cerrados,
+                  repletos de frutas, em toda região. A Frutos de Goiás nasceu
+                  com um objetivo: fazer parte da vida de seus consumidores com
+                  sabores que relembrem os momentos marcantes da infância e da
+                  vida de cada um, trazendo nostalgia e alegria em cada
+                  pedacinho.
+                </p>
+              </article>
+
+              <article class="flex column three__gap">
+                <h2 class="regular__h">E como garantimos isso?</h2>
+                <p class="regular__p green">
+                  O primeiro passo é trabalhar a qualidade, utilizando apenas
+                  frutas frescas, selecionadas, e ingredientes naturais de
+                  primeira linha em nossas criações. O que a Frutos de Goiás
+                  gosta mesmo é de colher as diversas frutas no pé, selecionar
+                  cada uma e levar até você os sabores únicos da natureza, de um
+                  jeito ainda mais saboroso e refrescante, aonde você estiver.
+                </p>
+              </article>
+            </article>
+
+            <article class="flex column three__gap">
+              <article class="flex column three__gap">
+                <h2 class="regular__h">E é natural mesmo?</h2>
+                <p class="regular__p green">
+                  Sejam os sabores do centro ou do norte do país, tudo é feito
+                  da forma mais caseira e artesanal possível. Nossas receitas
+                  são únicas, e compostas por cerca de 90&NonBreakingSpace;% de
+                  fruta. É fruta mesmo, mais cremosa e refrescante do que você
+                  imagina. Sabe o que mais faz parte da lista de ingredientes?
+                  Leite fresco, direto da fazenda, natural e integral. Também
+                  criamos por aqui as geleias e doces de frutas frescas que
+                  incorporaram os sorvetes e os recheios dos picolés.
+                </p>
+              </article>
+
+              <article class="flex column three__gap">
+                <h2 class="regular__h">Fruta do pé direto pro seu picolé!</h2>
+                <p class="regular__p green">
+                  A essência da Frutos de Goiás sempre foram as frutas. E mesmo
+                  com a expansão, os produtos continuam sendo fabricados no
+                  mesmo processo natural e assim, seguimos crescendo
+                  artesanalmente.
+                </p>
+              </article>
+            </article>
+
+            <div class="car__content__container">
+              <article class="green__container flex column two__gap">
+                <p class="regular__p white">
+                  Mesmo te contando <br />
+                  tudo isso, sabemos <br />
+                  que textos não têm sabor.
+                </p>
+                <p class="regular__p white">
+                  Por isso, vale a pena vir <br />
+                  até uma de nossas sorveterias <br />
+                  e açaiterias para experimentar <br />
+                  o que estamos falando.
+                </p>
+                <p class="regular__p white">Esperamos por você.</p>
+                <p class="regular__p white">
+                  "Recria tua vida, sempre, sempre. <br />
+                  Remove pedras e planta <br />
+                  roseiras e faz doces. <br />
+                  Recomeça." <br />
+                  — Cora Coralina.
+                </p>
+              </article>
+              <picture>
+                <img
+                  src="assets/caminhao-frutos.webp"
+                  alt=""
+                  class="car__image"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FIXME: About ends -->
     </main>
 
     <script src="js/index.js"></script>

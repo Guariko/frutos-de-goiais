@@ -1,8 +1,11 @@
 /* TODO: Setting up the project starts */
 
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap');
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
 }
 
 * {
@@ -16,7 +19,7 @@ html {
     box-shadow: none;
     text-transform: none;
     text-decoration: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    font-family: "Ubuntu" ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
                 Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
                 'Helvetica Neue', sans-serif;
 }
@@ -41,7 +44,7 @@ p {
 }
 
 p {
-    max-width: 50ch;
+    max-width: 55ch;
 }
 
 /* FIXME: Setting up the project ends */
@@ -137,7 +140,8 @@ p {
 }
 
 .section {
-    padding: 6rem var(--global-horizontal-padding);
+    padding: 10rem var(--global-horizontal-padding);
+    padding-bottom: 6rem;
 }
 
 .none {
@@ -156,12 +160,24 @@ p {
     gap: 5rem;
 }
 
+.three__gap {
+    gap: 3rem;
+}
+
+.ten__gap {
+    gap: 10rem;
+}
+
 .text__center {
     text-align: center;
 }
 
 .white {
     color: var(--white);
+}
+
+.green {
+    color: var(--green);
 }
 
 .dark__yellow {
@@ -333,7 +349,72 @@ p {
 
 /* FIXME: Hero section ends */
 
+/* TODO: About starts */
+
+.about-section {
+    padding-top: 12rem;
+}
+
+.about-section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background: url("../assets/pattern.webp");
+    background-size: 9rem;
+}
+
+.about-section .regular__h {
+    font-size: 3rem;
+}
+
+.about-section .regular__p {
+    font-size: 1.8rem;
+}
+
+.green__container {
+    padding: 6rem 4.2rem;
+    background: var(--green);
+    border-radius: 4rem;
+}
+
+.green__container .regular__p {
+    font-size: 1.6rem;
+}
+
+.car__image {
+    width: 100%;
+    max-width: 58rem;
+}
+
+/* FIXME: About ends */
+
 /* TODO: Media queries start */
+
+@media screen and (min-width: 600px) {
+
+    /* TODO: About adjustments */
+
+    .about__content {
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .about-section .regular__p {
+        max-width: 70ch;
+    }
+
+    .car__content__container {
+        width: 100%;
+        max-width: 72rem;
+    }
+
+    /* FIXME: About adjustments end */
+    
+}
 
 @media screen and (min-width: 700px) {
 
@@ -384,6 +465,56 @@ p {
     }
 
     /* FIXME: Header adjustments end */
+    
+}
+
+@media screen and (min-width: 1000px) {
+
+    /* TODO: About adjustments */
+
+    .about__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about__content {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 6rem;
+        max-width: 98rem;
+    }
+
+    .car__content__container {
+        min-width: 37rem;
+    }
+
+    /* FIXME: About adjustments end */
+    
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* TODO: About adjustments */
+
+    .about__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about__content {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 6rem;
+        max-width: 115rem;
+    }
+
+    .car__content__container {
+        min-width: 45rem;
+    }
+
+    /* FIXME: About adjustments end */
     
 }
 
