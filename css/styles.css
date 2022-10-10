@@ -207,6 +207,14 @@ p {
     font-size: 5rem;
 }
 
+.regular__image {
+    width: 100%;
+}
+
+.radius__two {
+    border-radius: 2rem;
+}
+
 /* FIXME: Global classes end */
 
 /* TODO: Header starts */
@@ -353,6 +361,7 @@ p {
 
 .about-section {
     padding-top: 12rem;
+    background: rgba(0,0,0,0.7);
 }
 
 .about-section::before {
@@ -362,38 +371,21 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    height: 3rem;
-    background: url("../assets/pattern.webp");
-    background-size: 9rem;
+    bottom: 0;
+    background: url("../assets/loja1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 .about-section .regular__h {
     font-size: 3rem;
+    color: var(--white);
 }
 
 .about-section .regular__p {
     font-size: 1.8rem;
-}
-
-.green__container {
-    padding: 6rem 4.2rem;
-    background: var(--green);
-    border-radius: 4rem;
-}
-
-.green__container .regular__p {
-    font-size: 1.6rem;
-}
-
-.green__container .regular__p strong {
-    font-size: 2rem;
-    font-weight: 300;
-}
-
-.car__image {
-    width: 100%;
-    object-fit: cover;
-    max-width: 58rem;
+    color: var(--white);
 }
 
 /* FIXME: About ends */
@@ -405,17 +397,12 @@ p {
     /* TODO: About adjustments */
 
     .about__content {
-        align-items: center;
-        padding: 0 2rem;
+        max-width: 50rem;
     }
 
-    .about-section .regular__p {
-        max-width: 70ch;
-    }
-
-    .car__content__container {
-        width: 100%;
-        max-width: 72rem;
+    .about__container {
+        display: flex;
+        justify-content: center;
     }
 
     /* FIXME: About adjustments end */
@@ -471,60 +458,15 @@ p {
     }
 
     /* FIXME: Header adjustments end */
-    
-}
-
-@media screen and (min-width: 1000px) {
 
     /* TODO: About adjustments */
 
-    .about__container {
-        display: flex;
-        justify-content: center;
-    }
-
     .about__content {
         flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 6rem;
-        max-width: 98rem;
+        max-width: 90rem;   
     }
 
-    .car__content__container {
-        min-width: 37rem;
-    }
-
-    /* FIXME: About adjustments end */
-    
-}
-
-@media screen and (min-width: 1200px) {
-
-    /* TODO: About adjustments */
-
-    .about__container {
-        display: flex;
-        justify-content: center;
-    }
-
-    .about__content {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 6rem;
-        max-width: 115rem;
-    }
-
-    .car__content__container {
-        min-width: 45rem;
-    }
-
-    .green__container {
-        padding-left: 5rem;
-    }
-
-    /* FIXME: About adjustments end */
+    /* FIXME: About adjusmtents end */
     
 }
 
