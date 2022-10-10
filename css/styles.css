@@ -188,6 +188,10 @@ p {
     margin-top: 3rem;
 }
 
+.margin__top__five {
+    margin-top: 5rem;
+}
+
 .margin__top__ten {
     margin-top: 10rem;
 }
@@ -412,6 +416,10 @@ p {
     border: 4px solid var(--green);
 }
 
+.product__section__content .button {
+    align-self: center;
+}
+
 /* FIXME: Products end */
 
 /* TODO: Media queries start */
@@ -421,8 +429,6 @@ p {
     /* TODO: Products adjustments */
 
     .product__section__content {
-        display: flex;
-        flex-direction: column;
         align-items: center;
     }
 
@@ -456,8 +462,7 @@ p {
     }
 
     .about__container {
-        display: flex;
-        justify-content: center;
+        align-items: center;
     }
 
     /* FIXME: About adjustments end */
