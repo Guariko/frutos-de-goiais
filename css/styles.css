@@ -422,6 +422,18 @@ p {
 
 /* FIXME: Products end */
 
+/* TODO: Whatsapp starts */
+
+body .fa-whatsapp {
+    color: var(--green);
+    position: fixed;
+    right: 6%;
+    bottom: 10%;
+    font-size: 8rem;
+}
+
+/* FIXME: Whatsapp ends */
+
 /* TODO: Media queries start */
 
 @media screen and (min-width: 500px) {
@@ -556,6 +568,18 @@ p {
     }
 
     /* FIXME: Hero section adjustments end */
+    
+}
+
+@media screen and (min-width: 1440px) {
+
+    /* TODO: Whatsapp adjustments */
+
+    body .fa-whatsapp {
+        right: 12%;
+    }
+
+    /* FIXME: Whatsapp adjustments end */
     
 }
 
