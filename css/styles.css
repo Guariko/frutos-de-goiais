@@ -235,6 +235,10 @@ p {
     text-transform: uppercase;
 }
 
+.margin__top__two {
+    margin-top: -1.5rem;
+}
+
 /* FIXME: Global classes end */
 
 /* TODO: Header starts */
