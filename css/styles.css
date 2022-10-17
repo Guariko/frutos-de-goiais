@@ -412,12 +412,24 @@ p {
 
 /* TODO: Products start */
 
+.products-section {
+    padding-top: 6rem;
+    padding-bottom: 9rem;
+}
+
 .product__container .regular__image {
     border: 4px solid var(--green);
 }
 
 .product__section__content .button {
     align-self: center;
+}
+
+.products__buttons__container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 8rem;
 }
 
 /* FIXME: Products end */
@@ -433,6 +445,63 @@ body .fa-whatsapp {
 }
 
 /* FIXME: Whatsapp ends */
+
+/* TODO: Footer starts */
+
+.footer__logo {
+    width: 10rem;
+    border-radius: 100%;
+}
+
+.footer__content {
+    gap: 4rem;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    width: 100%;
+    max-width: 100rem;
+}
+
+.footer__content h2 {
+    font-size: 2.2rem;
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+.footer__content p {
+    font-size: 1.6rem;
+}
+
+.footer p {
+    color: var(--white);
+}
+
+.footer {
+    background: #280824;
+}
+
+.copy__container {
+    border-top: 1px solid var(--white);
+    padding: 2rem var(--global-horizontal-padding);
+    display: flex;
+    justify-content: center;
+}
+
+.copy__container p {
+    font-size: 1.3rem;
+}
+
+.fa-instagram {
+    color: var(--white);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.fa-instagram:hover {
+    color: var(--green);
+}
+
+/* FIXME: Footer ends */
 
 /* TODO: Media queries start */
 
@@ -556,6 +625,42 @@ body .fa-whatsapp {
     }
 
     /* FIXME: About adjusmtents end */
+
+    /* TODO: Footer adjustments */
+
+    .footer__content {
+        flex-direction: row;
+        gap: 6rem;
+        padding-bottom: 4rem;
+        padding-top: 6rem;
+    }
+
+    .footer__content .fa-instagram {
+        position: relative;
+        top: -1rem;
+        
+    }
+
+    .contact {
+        margin-left: 8rem;
+    }
+
+    /* FIXME: Footer adjustments end */
+
+    /* TODO: Products adjustments */
+
+    .products__buttons__container {
+        flex-direction: row;
+        gap: 8rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .products__buttons__container .button {
+        width: 34rem;
+    }
+
+    /* FIXME: Products adjustments end */
     
 }
 

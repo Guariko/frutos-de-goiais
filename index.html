@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FRUTOS DE GOIAS</title>
+    <title>FRUTOS DE GOIÁS</title>
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -27,10 +27,10 @@
         <nav>
           <ul class="flex header__nav">
             <li>
-              <a href="#inicio" class="header__nav__item active">início</a>
+              <a href="#produtos" class="header__nav__item active">produtos</a>
             </li>
 
-            <li><a href="#sobre" class="header__nav__item">sobre</a></li>
+            <li><a href="#video" class="header__nav__item">vídeo</a></li>
 
             <li class="desktop">
               <picture
@@ -38,109 +38,18 @@
               /></picture>
             </li>
 
-            <li><a href="#" class="header__nav__item">produtos</a></li>
+            <li><a href="#sobre" class="header__nav__item">sobre</a></li>
 
-            <li><a href="#" class="header__nav__item">contato</a></li>
+            <li><a href="#contato" class="header__nav__item">contato</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main class="main">
-      <!-- TODO: Hero section starts -->
-      <section id="inicio" class="section hero-section relative">
-        <div class="flex column five__gap items__center">
-          <div class="relative pointer video__thumb__container">
-            <picture>
-              <img src="assets/logo.webp" alt="" class="video__thumb" />
-            </picture>
-            <i class="fa-solid fa-play absolute play__video dark__yellow"></i>
-          </div>
-
-          <div
-            class="video__container all fixed flex items__center content__center"
-          >
-            <div class="video__content">
-              <video
-                src="assets/videos/video.mp4"
-                class="video"
-                controls
-              ></video>
-            </div>
-            <i
-              class="fas fa-times white absolute font__five close__video pointer"
-            ></i>
-          </div>
-
-          <button type="button" class="button">Conheça nossa loja</button>
-        </div>
-      </section>
-      <!-- FIXME: Hero section ends -->
-
-      <!-- TODO: About starts -->
-
-      <section
-        id="sobre"
-        class="section global__padding about-section relative"
-      >
-        <div class="about__container flex column">
-          <div class="flex column ten__gap about__content">
-            <article class="flex column three__gap">
-              <article class="flex column three__gap">
-                <h2 class="regular__h">Por que existimos?</h2>
-                <p class="regular__p green">
-                  Nossa essência é inspirada na Cidade de Goiás, terra de Cora
-                  Coralina, famosa por seus doces e repletos de frutas. A Frutos
-                  de Goiás existe para trazer para seus consumidores os sabores
-                  que relembrem a infância.
-                </p>
-              </article>
-
-              <article class="flex column three__gap">
-                <h2 class="regular__h">E como garantimos isso?</h2>
-                <p class="regular__p green">
-                  Utilizando apenas frutas frescas, selecionadas, e ingredientes
-                  naturais de primeira linha. Colhemos as diversas frutas no pé,
-                  para levar até você os sabores únicos da natureza, de um jeito
-                  ainda mais saboroso e refrescante.
-                </p>
-              </article>
-            </article>
-
-            <article class="flex column three__gap">
-              <article class="flex column three__gap">
-                <h2 class="regular__h">E é natural mesmo?</h2>
-                <p class="regular__p green">
-                  São frutas de todo o Brasil. Tudo é feito da forma mais
-                  caseira e artesanal possível. As receitas são únicas com cerca
-                  de 90 % de fruta. É fruta mesmo, mais cremosa e refrescante do
-                  que você imagina. Agora adicione Leite fresco, direto da
-                  fazenda, natural e integral.
-                </p>
-              </article>
-
-              <article class="flex column three__gap">
-                <h2 class="regular__h">Fruta do pé direto pro seu picolé!</h2>
-                <p class="regular__p green">
-                  A essência da Frutos de Goiás sempre foram as frutas. Os
-                  produtos continuam sendo fabricados em um processo natural e
-                  assim, seguimos crescendo artesanalmente.
-                </p>
-              </article>
-            </article>
-          </div>
-
-          <a href="#" class="button uppercase margin__top__five"
-            >faça seu pedido</a
-          >
-        </div>
-      </section>
-
-      <!-- FIXME: About ends -->
-
       <!-- TODO: Products start -->
 
-      <section class="section">
+      <section id="produtos" class="section products-section">
         <div class="product__section__container">
           <div class="product__section__content flex column">
             <h2 class="regular__h uppercase text__center">nosso cardápio</h2>
@@ -269,15 +178,141 @@
               </div>
             </div>
 
-            <a href="#" class="button uppercase margin__top__five"
-              >faça seu pedido</a
-            >
+            <div class="flex products__buttons__container">
+              <a href="#" class="button uppercase">peça pelo ifood</a>
+              <a href="#" class="button uppercase">
+                Peça pelo delivery da loja</a
+              >
+            </div>
           </div>
         </div>
       </section>
 
       <!-- FIXME: Products end  -->
+
+      <!-- TODO: Hero section starts -->
+      <section id="video" class="section hero-section relative">
+        <div class="flex column five__gap items__center">
+          <div class="relative pointer video__thumb__container">
+            <picture>
+              <img src="assets/logo.webp" alt="" class="video__thumb" />
+            </picture>
+            <i class="fa-solid fa-play absolute play__video dark__yellow"></i>
+          </div>
+
+          <div
+            class="video__container all fixed flex items__center content__center"
+          >
+            <div class="video__content">
+              <video
+                src="assets/videos/video.mp4"
+                class="video"
+                controls
+              ></video>
+            </div>
+            <i
+              class="fas fa-times white absolute font__five close__video pointer"
+            ></i>
+          </div>
+
+          <button type="button" class="button">Conheça nossa loja</button>
+        </div>
+      </section>
+      <!-- FIXME: Hero section ends -->
+
+      <!-- TODO: About starts -->
+
+      <section
+        id="sobre"
+        class="section global__padding about-section relative"
+      >
+        <div class="about__container flex column">
+          <div class="flex column ten__gap about__content">
+            <article class="flex column three__gap">
+              <article class="flex column three__gap">
+                <h2 class="regular__h">Por que existimos?</h2>
+                <p class="regular__p green">
+                  Nossa essência é inspirada na Cidade de Goiás, terra de Cora
+                  Coralina, famosa por seus doces e repletos de frutas. A Frutos
+                  de Goiás existe para trazer para seus consumidores os sabores
+                  que relembrem a infância.
+                </p>
+              </article>
+
+              <article class="flex column three__gap">
+                <h2 class="regular__h">E como garantimos isso?</h2>
+                <p class="regular__p green">
+                  Utilizando apenas frutas frescas, selecionadas, e ingredientes
+                  naturais de primeira linha. Colhemos as diversas frutas no pé,
+                  para levar até você os sabores únicos da natureza, de um jeito
+                  ainda mais saboroso e refrescante.
+                </p>
+              </article>
+            </article>
+
+            <article class="flex column three__gap">
+              <article class="flex column three__gap">
+                <h2 class="regular__h">E é natural mesmo?</h2>
+                <p class="regular__p green">
+                  São frutas de todo o Brasil. Tudo é feito da forma mais
+                  caseira e artesanal possível. As receitas são únicas com cerca
+                  de 90 % de fruta. É fruta mesmo, mais cremosa e refrescante do
+                  que você imagina. Agora adicione Leite fresco, direto da
+                  fazenda, natural e integral.
+                </p>
+              </article>
+
+              <article class="flex column three__gap">
+                <h2 class="regular__h">Fruta do pé direto pro seu picolé!</h2>
+                <p class="regular__p green">
+                  A essência da Frutos de Goiás sempre foram as frutas. Os
+                  produtos continuam sendo fabricados em um processo natural e
+                  assim, seguimos crescendo artesanalmente.
+                </p>
+              </article>
+            </article>
+          </div>
+
+          <a href="#" class="button uppercase margin__top__five"
+            >faça seu pedido</a
+          >
+        </div>
+      </section>
+
+      <!-- FIXME: About ends -->
     </main>
+
+    <footer id="contato" class="footer">
+      <div>
+        <div class="flex content__center">
+          <div class="footer__content flex column global__padding">
+            <picture>
+              <img src="assets/logo.webp" alt="" class="footer__logo" />
+            </picture>
+
+            <article class="flex column two__gap">
+              <h2>endereço</h2>
+              <p>Avenida Barão do Rio Branco 748 - Centro - Palhoça - SC</p>
+            </article>
+
+            <article class="flex column contact two__gap">
+              <h2>Contatos</h2>
+              <p>Telefone: (48) 99610-8288</p>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <div class="copy__container">
+          <p>
+            &copy; 2022 Copyright | FRUTOS DE GOIÁS. Todos os direitos
+            reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <a href="#">
       <i class="fab fa-whatsapp"></i>
