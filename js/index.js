@@ -1,6 +1,7 @@
 /* TODO: Global variables start */
 
 const classToDisplayElement = "active";
+const desktop = 1280;
 
 /* FIXME: Global variables end */
 
@@ -47,6 +48,18 @@ closeVideo.addEventListener("click", (e) => {
 
 /* FIXME: Hero ends */
 
+/* TODO: Store images start */
+
+const kidImage = document.querySelector(".kids__image");
+
+getKidImages(kidImage, desktop);
+
+window.addEventListener("resize", (e) => {
+  getKidImages(kidImage, desktop);
+});
+
+/* FIXME: Store images end */
+
 /* TODO: Functions start */
 
 function addClass(elementToUse, classToAdd) {
@@ -55,6 +68,14 @@ function addClass(elementToUse, classToAdd) {
 
 function removeClass(elementToUse, classToRemove) {
   elementToUse.classList.remove(classToRemove);
+}
+
+function getKidImages(kidsElement, desktopWidth) {
+  if (window.innerWidth >= desktopWidth) {
+    kidsElement.src = "assets/loja7.webp";
+  } else {
+    kidsElement.src = "assets/loja4.webp";
+  }
 }
 
 /* FIXME: Functions end */
